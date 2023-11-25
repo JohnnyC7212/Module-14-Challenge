@@ -2,9 +2,5 @@
   "name": "Module-14-Challenge",
   "lockfileVersion": 3,
   "requires": true,
-  "packages": {
-    "": {
-      "name": "Module-14-Challenge"
-    }
-  }
+  "packages": {}
 }
