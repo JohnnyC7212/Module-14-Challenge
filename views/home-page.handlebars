@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page title -->
+    <title>homepage-content</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include Handlebars library -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.7/dist/handlebars.min.js"></script>
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <!-- Site title -->
+        <h1>Blogger</h1>
+    
+        <!-- Login and Profile buttons -->
+        <button class="uk-button uk-button-default btn btn-login"> Log In </button>
+        <button class="uk-button uk-button-default btn">Profile</button>
+    </header>
+    
+    <!-- Reviews section -->
+    <section class="review-section">
+        <!-- Section title -->
+        <h2 class="recent-activity">Recent Activity </h2>
+        
+        <!-- Review items -->
+        <div class="reviews">
+            <h3>Review 1</h3>
+            <p>This is the first review text.</p>
+        </div>
+
+        <div class="review">
+            <h3>Review 2</h3>
+            <p>This is the second review text.</p>
+        </div>
+
+        <div class="review">
+            <h3>Review 3</h3>
+            <p>This is the third review text.</p>
+        </div>
+    </section>
+
+    <form id="blogForm">
+        <label for ="title">Title:</label>
+        <input type ="text" id="title" required>
+        <br>
+        <label for = "content" >Content:</label>
+        <textarea id="content" required></textarea>
+        <br>
+        <button type="button" onclick="makeBlogPost()">Make Blog Post</button>
+    </form>
+
+    <div id="blog-content">
+        <!-- wiil be displayed here -->
+    </div>
+
+    <script src="/models/post.js"></script>
+
+    <!-- Login form template -->
+    <script type="text/x-handlebars-template" id="login-template">
+        <h2>Login</h2>
+        <form class="form loginn-form">
+            <!-- Email input -->
+            <div class="form-group">
+                <label for="email-login">email:</label>
+                <input class="form-input" type="text" id="email-login" />
+            </div>
+
+            <!-- Password input -->
+            <div class="form-group">
+                <label for="password-login">password:</label>
+                <input class="form-input" type="password" id="password-login"/>
+            </div>
+
+            <!-- Submit button -->
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">login</button>
+            </div>
+            
+            <!-- Include login.js script -->
+            <script src="/js/login.js"></script>
+        </form>
+    </script>
+    
+    <!-- Include main.js script -->
+    <script src="main.js"></script>
+</body>
+</html>
